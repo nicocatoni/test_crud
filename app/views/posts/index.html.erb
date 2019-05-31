@@ -1,0 +1,12 @@
+<% @posts.each do |post| %>
+ <%= post.title %><br>
+ <%= post.content %><br>
+ <%= link_to 'Ver', post %><br>
+ <%= link_to 'edit', edit_post_path(post) %><br>
+ <%= link_to "borrar", post, method: :delete %><br>
+
+
+<% end %>
+<br>
+
+<%= link_to  "New post", posts_new_path %>
